@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>5e7f7859-57d1-4613-80ae-71328906905d</Guid>
+    <Name>Proximity Mine Proving Grounds Project</Name>
+    <Description>This mod adds a Proving Ground Project to create powerful Proximity Mines on completion of the Andromedon Autopsy.
+
+These mines can be thrown without breaking concealment and when detonated by enemy movement will also not break concealment.
+
+You will also get a whole new Claymore weapon that will give you an additional Claymore to throw during missions, this Proximity Claymore will not affect your Reapers standard Claymore/Homing Mine charges, but it should respected extra range and damage from the Shrapnel ability.
+
+You can only have one each of these non-concealment breaking mines but the items are re-useable.
+
+The project costs 300 supplies and an Elerium Core, but this can be changed in the config files as well as if they break or retain concealment on throw and explosion, and if they can be built more than once.
+
+Compatability;
+It should do the same non-cealment break for the Pathfinder Proximity Stun Mine and the project will also give you one of these on completion.
+
+Overrides;
+To my knowledge I've not overriden anything so it shouldn't break anything, bug reports welcome.
+
+FAQ;
+1) You seem like a noob...
+Thanks, this is my first XCOM2 mod, I hope you like it
+2)Vanilla/LW2 Version?
+Not likely
+3)LWOTC Version?
+I'm dreaming with you...
+4)Can I change 'this' ?
+Check the Config.ini, it's what it's there for. If I don't have a config value for it, then it is likely something that couldn't be easily changed.
+
+Special Thanks to;
+RoboJumper, Iridar and Puma for tips, code help and tutorials
+Claus for the Pathfinders mod whose code I learned from
+The XCOM2 modders discord for support
+
+~ Enjoy
+
+tags= War Of The Chosen, Item, Weapon</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>WOTC_ProxMinePG</AssemblyName>
+    <RootNamespace>WOTC_ProxMinePG</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+    <Folder Include="Localization\" />
+    <Folder Include="Content" />
+    <Folder Include="Src\" />
+    <Folder Include="Src\ProximityMineProvingGroundsProject\" />
+    <Folder Include="Src\ProximityMineProvingGroundsProject\Classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\XComProxMinePGConfig.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\UILibrary_ProxMinesPGImages.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="ModPreview.jpg" />
+    <Content Include="Config\XComEditor.ini" />
+    <Content Include="Config\XComEngine.ini" />
+    <Content Include="Config\XComGame.ini" />
+    <Content Include="Localization\XComGame.int" />
+    <Content Include="Src\ProximityMineProvingGroundsProject\Classes\X2Ability_ProximityClaymores.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ProximityMineProvingGroundsProject\Classes\X2DownloadableContentInfo_ProximityMineProvingGroundsProject.uc" />
+    <Content Include="Src\ProximityMineProvingGroundsProject\Classes\X2Effect_XcomProximityCLAYMORE.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ProximityMineProvingGroundsProject\Classes\X2Item_ProximityClaymore.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ProximityMineProvingGroundsProject\Classes\X2StrategyElement_ProxMinePGTech.uc">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
+</Project>
